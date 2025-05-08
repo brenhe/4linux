@@ -1,0 +1,3 @@
+[submodule "submodulo/submoduleTest"]
+	path = submodulo/submoduleTest
+	url = https://github.com/brenhe/submoduleTest.git
