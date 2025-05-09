@@ -10,8 +10,8 @@ jobs:
       - name: Exibir variável do AMBIENTE
         run: echo "O ambiente de execução é:" ${{ vars.AMBIENTE }}
 
-      - name: Exibir variável do AMBIENTE
-        run: echo "País:" ${{ vars.AMBIENTE }}
+      - name: Exibir variável do PAÍS
+        run: echo "País:" ${{ vars.PAIS }}
 
       - name: Exibir variável do ESTADO
         run: echo "Estado:" ${{ vars.ESTADO }}
