@@ -10,6 +10,5 @@ jobs:
       - name: Exibir Váriavel Global GITHUB_RUN_ID
         run: echo "Váriavel Global do GITHUB" ${{ github.run_number }}
       
-    steps:
       - name: Exibir Váriavel Global GITHUB_REPOSITORY
         run: echo "Váriavel Global do GITHUB" ${{ github.repository_id }}
