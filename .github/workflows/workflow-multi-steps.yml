@@ -10,17 +10,19 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - name: primeiro - Exibir Mensagem
-        run: echo "Essa é uma execução do primeiro stage no GitHub Actions"
+        run: sleep 10 && echo "Essa é uma execução do primeiro stage no GitHub Actions"
 
   segundo-stage:
     runs-on: ubuntu-latest
+    needs: [primeiro-stage]
     steps: 
       - name: segundo - Exibir Mensagem
-        run: echo "Essa é uma execução do segundo stage no GitHub Actions"
+        run: sleep 10 && echo "Essa é uma execução do segundo stage no GitHub Actions"
                 
   terceiro-stage:
     runs-on: ubuntu-latest
+    needs: [segundo-stage]
     steps: 
       - name: terceiro - Exibir Mensagem
-        run: echo "Essa é uma execução do terceiro stage no GitHub Actions"
+        run: sleep 10 && echo "Essa é uma execução do terceiro stage no GitHub Actions"
         
