@@ -1,0 +1,13 @@
+name: Variáveis no Workflow
+
+on: 
+  workflow_dispatch: #Disparo manual
+
+jobs: 
+  variaveis-exemplo:
+    runs-on: ubuntu-latest
+    env:
+      MY_VARIABLE: "Olá, GitHub Actions"
+    steps:
+      - name: Exibir Váriavel local
+        run: echo "A variável contém:" $MY_VARIABLE
