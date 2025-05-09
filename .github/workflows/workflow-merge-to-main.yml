@@ -1,0 +1,16 @@
+name: Merge to Main
+
+on:
+ push:
+   branches:
+     - main # Aciona a pipeline somente quado houver um merge ou commit na main
+
+jobs:
+  after_merge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Executar pós-merge
+        run: echo "Um PR foi mesclado na branch main!"
