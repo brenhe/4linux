@@ -3,11 +3,24 @@ name: Variáveis no Workflow
 on: 
   workflow_dispatch: #Disparo manual
 
+env:
+  MY_VARIABLE: "Olá, GitHub Actions"
+  PROJECT_NAME: "Meu Projeto"
+
 jobs: 
-  variaveis-exemplo:
+  primeiro-variaveis-exemplo:
     runs-on: ubuntu-latest
-    env:
-      MY_VARIABLE: "Olá, GitHub Actions"
     steps:
       - name: Exibir Váriavel local
         run: echo "A variável contém:" $MY_VARIABLE
+      - name: Exibir Váriavel local
+        run: echo "A variável contém:" $PROJECT_NAME
+
+  segundo-variaveis-exemplo:
+    runs-on: ubuntu-latest
+    needs: [primeiro-variaveis-exemplo]
+    steps:
+      - name: Exibir Váriavel local
+        run: echo "A variável contém:" $MY_VARIABLE
+      - name: Exibir Váriavel local
+        run: echo "A variável contém:" $PROJECT_NAME
