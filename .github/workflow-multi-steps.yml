@@ -1,0 +1,26 @@
+name: Multi Steps
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  primeiro-stage:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: primeiro - Exibir Mensagem
+        run: echo "Essa é uma execução do primeiro stage no GitHub Actions"
+
+  segundo-stage:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: segundo - Exibir Mensagem
+        run: echo "Essa é uma execução do segundo stage no GitHub Actions"
+                
+  terceiro-stage:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: terceiro - Exibir Mensagem
+        run: echo "Essa é uma execução do terceiro stage no GitHub Actions"
+        
