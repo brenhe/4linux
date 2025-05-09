@@ -1,0 +1,11 @@
+name: Execução Manual
+
+on: 
+  workflow_dispatch: #Disparo manual
+
+jobs:
+  print_mensage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Exibir mensagem
+        run: echo "Essa é uma execução manual do GitHub Actions"
